@@ -1,0 +1,56 @@
+@import 'layout.scss';
+
+* {
+     box-sizing: border-box;
+   }
+   .content {
+     display: flex;
+     flex-direction: column;
+   }
+   span {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-transform: lowercase;
+     background-color: #faebd7;
+     padding: 8px;     
+     border-radius: 4px;
+     
+   }
+   .item {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 200px;
+   }
+   .navigation {
+     background-color: #ff7f50;
+     flex-grow: 1;
+     flex-basis: 0;
+   }
+   .product__list {
+     background-color: #006400;
+     flex-grow: 1;
+     flex-basis: 0;
+   }
+   .news__bar {
+     background-color: #0ff;
+     flex-grow: 1;
+   }
+
+   @include small-screen {
+     .products {
+          display: flex;
+          flex-grow: 2;
+          flex-basis: 0;
+        }
+   }
+
+   @include large-screen {
+     .content {
+          display: flex;
+          flex-direction: row;
+        }
+        .news__bar {
+          flex-basis: 0;
+        }
+   }
+
